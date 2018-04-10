@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {% endblock %}
+
+{% block body %}
+    <div class="starter-template">
+        <h1 class="display-2">Petshop</h1>
+        <p class="lead">Doctrine e Symfony 4</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-striped">
+                {% for qts in qts_animais %}
+                    <tr>
+                        <th>{{ qts.nome }}</th>
+                        <td>{{ qts.qtde }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="col-md-6">
+            <table class="table table-striped">
+                {% for qts in qtde_por_raca %}
+                    <tr>
+                        <th>{{ qts.nome }}</th>
+                        <td>{{ qts.qtde }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+
+{% endblock %}
